@@ -25,9 +25,3 @@ It counts the page you're working in, including side peek, center peek, Notion s
 4. Open a Notion page in the browser.
 
 Also works in Edge, Arc and Brave. The Notion desktop app doesn't support extensions. To get an app-like window with the counter, open Notion in Chrome and use ⋮ → **Cast, save, and share → Install page as app**.
-
-## Limits
-
-- Text inside closed toggles isn't counted, because Notion doesn't put it on the page until the toggle is opened.
-- The page title isn't included.
-- It reads Notion's page structure directly, so a Notion redesign could break it.
