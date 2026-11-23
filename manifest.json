@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Notion Word Counter",
+  "version": "1.2",
+  "description": "Always-on word count for Notion pages that switches to the selection when you highlight text or blocks.",
+  "permissions": ["storage", "scripting"],
+  "host_permissions": [
+    "https://*.notion.so/*",
+    "https://*.notion.com/*",
+    "https://*.notion.site/*"
+  ],
+  "action": {
+    "default_title": "Notion word count",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.notion.so/*",
+        "https://*.notion.com/*",
+        "https://*.notion.site/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
